@@ -1,0 +1,28 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Handle API requests
+RewriteRule ^api/(.*)$ api/$1 [QSA,L]
+
+# Prevent access to sensitive files
+<FilesMatch "^(mikrotik\.php|app\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# PHP settings
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+
+# Default index
+DirectoryIndex index.php index.html
+
+# Prevent directory listing
+Options -Indexes
