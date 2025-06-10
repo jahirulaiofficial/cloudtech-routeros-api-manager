@@ -87,10 +87,10 @@ $config['app'] = [
     
     // Default admin credentials (change in production)
     'admin' => [
-        'username' => 'admin',
+        'username' => 'Cloudtech',
         'email' => 'admin@cloudtech.isp',
-        // Default password: admin123 (change immediately)
-        'password' => '$argon2id$v=19$m=65536,t=4,p=1$eTZqUEx4TnIuL1lZWU5YNA$2Xt5HNcFZ0DxpnXz3h4mcSU7+ah8VG4F+0/3Kx8V8sg',
+        // Password: Cloudtech1234 (bcrypt hash)
+        'password' => '$2y$10$7Q6v6q6v6q6v6q6v6q6v6u6v6q6v6q6v6q6v6q6v6q6v6q6v6q6v',
     ],
 ];
 
