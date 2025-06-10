@@ -1,0 +1,22 @@
+{
+    "name": "cloudtech/v4",
+    "description": "MikroTik RouterOS API Management Tool",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "CloudTech\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CloudTech ISP",
+            "email": "admin@cloudtech.isp"
+        }
+    ],
+    "minimum-stability": "stable"
+}
